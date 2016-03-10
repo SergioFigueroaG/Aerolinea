@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ciudad salida:</strong>
+  <%= @route.ciudad_salida.nombre %>
+</p>
+
+<p>
+  <strong>Ciudad destino:</strong>
+  <%= @route.ciudad_destino.nombre %>
+</p>
+
+<p>
+  <strong>Hora salida:</strong>
+  <%= @route.hora_salida %>
+</p>
+
+<p>
+  <strong>Hora llegada:</strong>
+  <%= @route.hora_llegada %>
+</p>
+
+<p>
+  <strong>Avion:</strong>
+  <%= @route.airplane.nombre_aerolinea %> <%= @route.airplane.code %>
+</p>
+
+<%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %>

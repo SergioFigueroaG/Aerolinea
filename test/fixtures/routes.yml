@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ciudad_salida: MyString
+  ciudad_destino: MyString
+  hora_salida: 
+  hora_llegada: 
+  avion: MyString
+
+two:
+  ciudad_salida: MyString
+  ciudad_destino: MyString
+  hora_salida: 
+  hora_llegada: 
+  avion: MyString

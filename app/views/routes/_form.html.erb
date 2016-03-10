@@ -1,0 +1,42 @@
+<%= form_for(@route) do |f| %>
+  <% if @route.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@route.errors.count, "error") %> prohibited this route from being saved:</h2>
+
+      <ul>
+      <% @route.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :hora_salida %><br>
+    <%= f.text_field :hora_salida %>
+  </div>
+  <div class="field">
+    <%= f.label :hora_llegada %><br>
+    <%= f.text_field :hora_llegada %>
+  </div>
+  <div class="field">
+    <div>
+     
+    <%= f.select :airplane_id, Airplane.all.collect{|c| ["#{c.nombre_aerolinea} #{c.code}", c.id]} %>
+  </div>
+    
+    <div>
+    <%= f.label :ciudadsalida_id %>
+    <%= f.select :ciudadsalida_id, City.all.collect{|c| [c.nombre, c.id]} %>
+  </div>
+
+  <div>
+    <%= f.label :ciudaddestino_id %>
+    <%= f.select :ciudaddestino_id, City.all.collect{|c| [c.nombre, c.id]} %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

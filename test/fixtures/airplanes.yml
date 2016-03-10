@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_aerolinea: MyString
+  code: MyString
+
+two:
+  nombre_aerolinea: MyString
+  code: MyString
